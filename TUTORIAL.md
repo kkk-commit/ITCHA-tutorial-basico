@@ -11,17 +11,34 @@ Seguiremos utilizando este directorio en tutoriales posteriores.
 $ mkdir ~/tutorial
 ```
 
-Para poner el directorio `tutorial` bajo el control de Git, vaya a ese directorio y utilice el comando init.
+Para poner el directorio `tutorial` bajo el control de Git, vaya a ese directorio y utilice el comando `init`.
 ```
 $ cd ~/tutorial
 $ git init
 Initialized empty Git repository
 in /Users/yourname/Desktop/tutorial/.git/
 ```
+___
+##### Consejo
+El comando `init` crea el directorio `.git`. El directorio `.git` contiene los archivos necesarios para que Git funcione.<br>
 
-### Guardar los Cambios en el Repositorio: status, add, commit, log
+```
+koyno@LAPTOP-J1K1E58T MINGW64 ~/tutorial (master)
+$ ls -la
+total 33
+drwxr-xr-x 1 koyno 197609  0 Apr  2 11:40 ./
+drwxr-xr-x 1 koyno 197609  0 Apr 24 14:56 ../
+drwxr-xr-x 1 koyno 197609  0 Apr  9 15:23 .git/
+```
+___
 
-Cree un fichero de texto llamado `sample.txt` en el directorio `tutorial`. <br>
+### Guardar los Cambios en el Repositorio: status, add, commit, log, diff
+
+Cree un fichero de texto llamado `sample.txt` en el directorio `tutorial`. 
+```
+$ nano sample.txt
+```
+
 En el contenido del archivo, introduzca el siguiente texto.
 ```
 Comandos Git básicos
@@ -110,9 +127,12 @@ grow, mark and tweak your common history
 ```
 
 En realidad, ejecute el siguiente comando para añadir `sample.txt` al índice y compruébelo.<br>
+El comando `diff` también puede utilizarse para revisar los cambios.<br>
 El archivo `sample.txt` ha sido añadido al índice y está listo para ser commit.
 ```
 $ git status
+～contenidos de salida～
+$ git diff
 ～contenidos de salida～
 $ git add sample.txt
 $ git status
@@ -131,3 +151,9 @@ Compruebe el historial de cambios del repositorio.
 ```
 $ git log
 ```
+
+Resultado de la ejecución del comando：
+![image](https://github.com/kkk-commit/ITCHA-tutorial-basico/assets/83223664/1d798219-56c5-4b72-80f6-52e86548320a)
+
+![image](https://github.com/kkk-commit/ITCHA-tutorial-basico/assets/83223664/969b6c1f-9d9e-4de2-a576-1881116f046d)
+
