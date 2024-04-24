@@ -30,17 +30,17 @@ Al dividir el repositorio en dos tipos, remoto y local, puedes utilizar el repos
 
 ![image](https://github.com/itcha-organization/git-tutorial-basico/assets/83223664/7200aabb-4f1d-4707-9d32-57a98b1b75d2)
 
-### Confirmación de los cambios (Commit)
+### commit de los cambios (Commit)
 
-Para registrar adiciones y cambios a ficheros y directorios en el repositorio, se realiza una operación llamada confirmación.
+Para registrar adiciones y cambios a ficheros y directorios en el repositorio, se realiza una operación llamada commit.
 
-Cuando realiza una confirmación, se crea una confirmación (o revisión) en el repositorio, que registra la diferencia entre la última confirmación y el estado actual.
+Cuando realiza una commit, se crea una commit (o revisión) en el repositorio, que registra la diferencia entre la última commit y el estado actual.
 
-Estas confirmaciones se almacenan en el repositorio en orden cronológico, como se muestra en el siguiente diagrama.<br>
+Estos commits se almacenan en el repositorio en orden cronológico, como se muestra en el siguiente diagrama.<br>
 Rastreando estos commits desde el último, puedes ver la historia de los cambios pasados y su contenido.
 
 * HEAD<br>
-  Puntero que indica dónde está trabajando actualmente, normalmente la confirmación más reciente en el extremo.
+  Puntero que indica dónde está trabajando actualmente, normalmente la commit más reciente en el extremo.
 
 ![image](https://github.com/itcha-organization/git-tutorial-basico/assets/83223664/9c570bff-cd35-4df7-820a-cd7a91fed114)
 
@@ -48,10 +48,10 @@ Rastreando estos commits desde el último, puedes ver la historia de los cambios
 
 En Git, el directorio en el que estás trabajando, que está bajo el control de Git, se llama árbol de trabajo.
 
-Con el comando Git add enviamos los cambios a staging (o índice), que es un estado intermedio en el que se van almacenando los archivos a enviar en el commit.<br>
-Finalmente con commit lo enviamos al repositorio local.
+Con el comando `git add` enviamos los cambios a staging (o índice), que es un estado intermedio en el que se van almacenando los archivos a enviar en el commit.<br>
+Finalmente con `git commit` lo enviamos al repositorio local.
 
-Si queremos colaborar con otros, con push subimos los archivos a un repo remoto y mediante pull podríamos traer los cambios realizados por otros en remoto hacia nuestro directorio de trabajo.
+Si queremos colaborar con otros, con `git push` subimos los archivos a un repo remoto y mediante `git pull` podríamos traer los cambios realizados por otros en remoto hacia nuestro directorio de trabajo.
 
 Si comenzamos trabajando en remoto, lo primero que hacemos es un clon de la información en el directorio local.
 
@@ -71,7 +71,7 @@ https://www.neoguias.com/instalar-git-windows/
 Una vez instalado, inicia Menú Inicio > Todos los programas > Git > Git Bash.
 
 La configuración de git se registra en un archivo .gitconfig que se crea en el directorio home del usuario. Puedes editar el archivo directamente, pero aquí usaremos el comando config para configurar los ajustes. <br>
-Establecer el nombre de usuario y la dirección de correo electrónico, que se registran en Confirmación.
+Establecer el nombre de usuario y la dirección de correo electrónico, que se registran en commit.
 ```
 $ git config --global user.name "<Nombre de usuario>"
 $ git config --global user.email "<Dirección de correo electrónico de ITCHA>"
@@ -93,10 +93,10 @@ Ejecute el siguiente comando, reemplazando el parámetro de segundo opcion por t
 $ ssh-keygen -t ed25519 -C "<Dirección de correo electrónico de ITCHA>"
 ```
 
-Reaccione a la confirmación pulsando Intro.
+Reaccione a la commit pulsando Intro.
 ![image](https://github.com/itcha-organization/git-tutorial-basico/assets/83223664/41a3c6c4-67ac-40dd-8a1b-f534c2eaf782)
 
-Si aparece la siguiente confirmación, seleccione `No` e inténtelo con una clave existente.
+Si aparece la siguiente commit, seleccione `No` e inténtelo con una clave existente.
 ```
 /c/Users/oonumakyou/.ssh/id_ed25519 already exists.
 Overwrite (y/n)?
